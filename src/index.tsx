@@ -1,19 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { boxersList } from "./boxers";
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const App = ({ boxers }: { boxers: Record<string, string | number>[] }) => {
+    return (
+        <div style={{display: 'flex', flexWrap: 'wrap' }}>
+            {boxers.map((boxer) => <div key={boxer.name} style={{ width: 200, margin: 10, padding: 10, border: '1px solid #bbb', background: '#FAFAFA', borderRadius: 3, lineHeight: '10px' }}>{boxer.name}</div>)}
+        </div>
+
+    )
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <React.StrictMode>
+        <App boxers={boxersList} />
+    </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
