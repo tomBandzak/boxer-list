@@ -1,4 +1,13 @@
-export const boxersList = [
+export type Boxer =     {
+    name: string;
+    division: string;
+    fights: number;
+    win: number;
+    loss: number;
+    kos: number;
+}
+
+export const boxersList: Boxer[] = [
     {
         name: "Muhammad Ali",
         division: "heavy",
