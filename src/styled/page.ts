@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const MainWrap = styled.div`
+export const BoxerListWrap = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;

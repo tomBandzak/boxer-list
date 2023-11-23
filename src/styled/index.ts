@@ -1,11 +1,12 @@
 import { BoxerBox, BoxerDetailItem } from './boxerComponents';
-import { MainWrap } from './page';
-import { DetailItemLabel, DetailItemValue } from './typography';
+import { BoxerListWrap } from './page';
+import { DetailItemLabel, DetailItemValue, NamesHeader } from './typography';
 
 export {
   DetailItemLabel,
   DetailItemValue,
   BoxerBox,
   BoxerDetailItem,
-  MainWrap
+  BoxerListWrap,
+  NamesHeader
 }
